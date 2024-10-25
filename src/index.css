@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "DMSans-italicVariable";
+  src: url("/fonts/DMSans-Italic-VariableFont_opsz,wght.ttf");
+}
+
+@font-face {
+  font-family: "DMSans-medium";
+  src: url("/fonts/DMSans-Medium.ttf");
+}
+
+@font-face {
+  font-family: "DMSans-mediumItalic";
+  src: url("/fonts/DMSans-MediumItalic.ttf");
+}
+
+@font-face {
+  font-family: "DMSans-regular";
+  src: url("/fonts/DMSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "DMSans-variable";
+  src: url("/fonts/DMSans-VariableFont_opsz,wght.ttf");
+}
