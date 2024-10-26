@@ -1,3 +1,4 @@
+import React from "react";
 import button from "../../public/illustration-create-post.webp";
 import starIcon from "../../public/illustration-five-stars.webp";
 import schedule from "../../public/illustration-schedule-posts.webp";
@@ -7,12 +8,12 @@ import ai from "../../public/illustration-ai-content.webp";
 import audience from "../../public/illustration-audience-growth.webp";
 import followers from "../../public/illustration-grow-followers.webp";
 
-export default function Bento() {
+const Bento2 = () => {
   return (
-    <div className=" container mx-auto flex  w-full items-center justify-center h-[100vh]">
-      <div className="grid grid-cols-1 h-full w-full gap-9  md:grid-cols-12 grid-rows-10 rounded-lg p-10">
-        <div className="col-span-1 row-span-1 md:row-span-5 md:col-span-5 bg-yellow-100 rounded-lg flex items-center justify-center">
-          <div className=" flex flex-col justify-center w-2/3">
+    <div className="container mx-auto p-4 sm:p-10">
+      <div className="flex flex-col sm:grid sm:grid-cols-12 sm:grid-rows-10 gap-8 sm:h-[100vh]">
+        <div className="  sm:col-span-3 sm:row-span-5 order-7 sm:order-none  bg-yellow-100 rounded-lg flex items-center justify-center">
+          <div className=" flex flex-col justify-center w-2/3 p-4 md:p-0">
             <p className="text-base md:text-4xl font-DMSansRegular font-bold text-left">
               Create and schedule
             </p>
@@ -29,13 +30,23 @@ export default function Bento() {
             </div>
           </div>
         </div>
+        <div className="  sm:col-span-3 sm:row-span-5 sm:col-start-1 sm:row-start-6 order-8 sm:order-none bg-yellow-500 rounded-lg flex items-center justify-center">
+          <div className=" flex flex-col w-full h-full p-10 overflow-hidden">
+            <div className=" flex flex-col gap-3">
+              <p className="text-base md:text-4xl font-DMSansRegular font-bold w-3/4">
+                Write your content using AI
+              </p>
 
-        <div className="col-span-2 row-span-3 md:row-span-4 md:col-span-6 bg-purple-500 rounded-lg flex items-center justify-center">
-          <div className=" flex flex-col text-white justify-center items-center">
-            <p className="text-base md:text-6xl font-DMSansRegular font-light mb-2">
+              <img src={ai} className="mt-3" />
+            </div>
+          </div>
+        </div>
+        <div className="  sm:col-span-6 sm:row-span-4 sm:col-start-4 sm:row-start-1 order-1 sm:order-none  bg-purple-500 rounded-lg flex items-center justify-center">
+          <div className=" flex flex-col text-white justify-center items-center p-4">
+            <p className="text-3xl  md:text-6xl font-DMSansRegular font-light mb-2">
               Social Media <span className="text-yellow-300">10x</span>
             </p>
-            <p className="text-base md:text-6xl font-DMSansRegular font-light mb-4">
+            <p className="text-3xl md:text-6xl font-DMSansRegular font-light mb-4">
               <span className=" font-DMSansItalicVariable font-light">
                 Faster
               </span>{" "}
@@ -49,30 +60,27 @@ export default function Bento() {
             </div>
           </div>
         </div>
-
-        <div className="col-span-1 row-span-3 md:row-span-3 md:col-span-3 bg-white rounded-lg flex items-center justify-center">
+        <div className="  sm:col-span-3 sm:row-span-3 sm:col-start-4 sm:row-start-5 order-2 sm:order-none bg-white rounded-lg flex items-center justify-center">
           <div className=" flex flex-col w-full h-full p-10">
             <div className=" flex flex-col gap-3">
-              <img src={platforms} />
+              <img src={platforms} className="" />
               <p className="text-base md:text-3xl font-DMSansMedium font-bold w-3/4 ">
                 Manage multiple accounts and platforms.
               </p>
             </div>
           </div>
         </div>
-
-        <div className="col-span-1 row-span-3 md:row-span-3 md:col-span-3 bg-yellow-500 rounded-lg flex items-center justify-center">
+        <div className="  sm:col-span-3 sm:row-span-3 sm:col-start-7 sm:row-start-5 order-3 sm:order-none bg-yellow-500 rounded-lg flex items-center justify-center">
           <div className=" flex flex-col w-full h-full p-10 overflow-hidden">
             <div className=" flex flex-col">
               <p className="text-base md:text-3xl font-DMSansMedium font-bold w-3/4 ">
                 Maintain a consistent posting schedule
               </p>
-              <img src={calender} className="mt-2 md:translate-y-8" />
+              <img src={calender} className="mt-2" />
             </div>
           </div>
         </div>
-
-        <div className="col-span-1 row-span-3 md:row-span-3 md:col-span-3 bg-white rounded-lg flex items-center justify-center">
+        <div className="  sm:col-span-3 sm:row-span-3 sm:col-start-4 sm:row-start-8 order-6 sm:order-none bg-white rounded-lg flex items-center justify-center">
           <div className=" flex flex-col w-full h-full p-10 overflow-hidden">
             <div className=" flex flex-col gap-3">
               <p className="text-base md:text-6xl font-DMSansMedium font-bold flex gap-2">
@@ -96,48 +104,30 @@ export default function Bento() {
             </div>
           </div>
         </div>
-
-        <div className="col-span-1 row-span-6 bg-purple-100 rounded-lg flex items-center justify-center">
-          <div className="">
-            <div className=" flex flex-col overflow-hidden gap-6">
-              <p className=" font-DMSansRegular text-base md:text-4xl font-bold pl-10 pr-5 w-3/4">
-                Schedule to social media.
-              </p>
-              <img src={schedule} className=" translate-x-10" />
-              <p className=" font-DMSansRegular text-base w-3/4 pl-10">
-                Optimize post timings to publish content at the perfect time for
-                <br />
-                your audience.
-              </p>
-            </div>
+        <div className="  sm:col-span-6 sm:row-span-3 sm:col-start-7 sm:row-start-8 order-5 sm:order-none bg-purple-500 rounded-lg flex items-center justify-center">
+          <div className=" flex  md:justify-between gap-4 p-10">
+            <img src={followers} className=" w-2/6" />
+            <p className=" text-white text-2xl md:text-5xl font-DMSansRegular w-3/6">
+              Grow followers with non-stop content.
+            </p>
           </div>
         </div>
-
-        <div className="col-span-1 row-span-5 bg-yellow-500 rounded-lg flex items-center justify-center">
-          <div className=" flex flex-col w-full h-full p-10 overflow-hidden">
-            <div className=" flex flex-col gap-3">
-              <p className="text-base md:text-4xl font-DMSansRegular font-bold w-3/4">
-                Write your content using AI
-              </p>
-
-              <img src={ai} className="mt-3" />
-            </div>
-          </div>
-        </div>
-
-        
-
-        <div className="col-span-2 row-span-3 bg-purple-500 rounded-lg flex items-center justify-center">
-          <div className=" ">
-            <div className=" flex justify-between gap-4 p-10">
-              <img src={followers} className=" w-2/6" />
-              <p className=" text-white text-base md:text-5xl font-DMSansRegular w-3/6">
-                Grow followers with non-stop content.
-              </p>
-            </div>
+        <div className="  sm:col-span-3 sm:row-span-7 sm:col-start-10 sm:row-start-1 order-4 sm:order-none bg-purple-100 rounded-lg flex items-center justify-center">
+          <div className=" flex flex-col overflow-hidden gap-6 p-4 md:p-0">
+            <p className=" font-DMSansRegular text-base md:text-4xl font-bold pl-10 pr-5 w-3/4">
+              Schedule to social media.
+            </p>
+            <img src={schedule} className=" translate-x-10" />
+            <p className=" font-DMSansRegular text-base w-3/4 pl-10">
+              Optimize post timings to publish content at the perfect time for
+              <br />
+              your audience.
+            </p>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Bento2;
